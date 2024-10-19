@@ -14,11 +14,19 @@ const PlayerContainer = styled.div`
 
   @media (max-width: 768px) {
     padding: 10px;
+    margin-bottom: 70px;
   }
 `;
 
 const SongInfo = styled.div`
   flex: 1;
+  @media (max-width: 768px) {
+    h4 {
+      font-size: 1.0rem;
+    }
+    p {
+      font-size: 0.8rem;
+  }
 `;
 
 const Controls = styled.div`
