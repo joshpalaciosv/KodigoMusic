@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaHome, FaSearch, FaBook, FaSignOutAlt } from 'react-icons/fa';
+import { FaHome, FaSearch, FaBook, FaSignOutAlt} from 'react-icons/fa';
 import { NavLink, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
@@ -81,22 +81,22 @@ function Sidebar({ onLogout }) {
       </MenuImg>  
       <MenuItem to="/home" className={location.pathname === '/home' ? 'active' : ''}>
         <FaHome />
-        <MenuText>Home</MenuText>
+        <MenuText>Principal</MenuText>
       </MenuItem>
-      <MenuItem to="/search" className={location.pathname === '/search' ? 'active' : ''}>
+      {/* <MenuItem to="/search" className={location.pathname === '/search' ? 'active' : ''}>
         <FaSearch />
-        <MenuText>Search</MenuText>
-      </MenuItem>
+        <MenuText>Buscar</MenuText>
+      </MenuItem> */}
       <MenuItem to="/library" className={location.pathname === '/library' ? 'active' : ''}>
         <FaBook />
-        <MenuText>Your Library</MenuText>
+        <MenuText>Tu Libreria</MenuText>
       </MenuItem>
       {/* utilizando nuevamente un evento para cerrar sesion. <Sidebar onLogout={handleLogout} /> en App.jsx */}
       {/* tambien utilizamos el feature as para que el suguiente elemento MenuItem sea un div ya que arriba se define como un NavLink con ello
       podemos utilizar el onclick*/}
       <MenuItem as="div" onClick={onLogout}>
         <FaSignOutAlt />
-        <MenuText>Logout</MenuText>
+        <MenuText>Salir</MenuText>
       </MenuItem>
     </SidebarContainer>
   );
