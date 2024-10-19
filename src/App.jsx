@@ -56,8 +56,8 @@ function App() {
       <AppContainer>
       
         <ContentWrapper>
-          //el componente Sidebar recibe la funcion handleLogout para cerrar la sesion.
-          //en prop onLogout se llamda desde el componente Sidebar
+          {/* el componente Sidebar recibe la funcion handleLogout para cerrar la sesion.
+          en prop onLogout se llamada desde el componente Sidebar */}
 
           <Sidebar onLogout={handleLogout} />
           <Routes>
