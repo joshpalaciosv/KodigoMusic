@@ -1,7 +1,9 @@
 import React from 'react'
+// importamos axios para hacer peticiones HTTP
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
+// creamos un componente llamado Greeting para mostrar un saludo dependiendo de la hora del dia
 export default function Greeting() {
 
         const [greeting, setGreeting] = useState('');

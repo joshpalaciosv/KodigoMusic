@@ -73,6 +73,7 @@ const Logo = styled.img`
 
 function Sidebar({ onLogout }) {
   const location = useLocation();
+  console.log(location.pathname);
 
   return (
     <SidebarContainer>
@@ -83,10 +84,6 @@ function Sidebar({ onLogout }) {
         <FaHome />
         <MenuText>Principal</MenuText>
       </MenuItem>
-      {/* <MenuItem to="/search" className={location.pathname === '/search' ? 'active' : ''}>
-        <FaSearch />
-        <MenuText>Buscar</MenuText>
-      </MenuItem> */}
       <MenuItem to="/library" className={location.pathname === '/library' ? 'active' : ''}>
         <FaBook />
         <MenuText>Tu Libreria</MenuText>

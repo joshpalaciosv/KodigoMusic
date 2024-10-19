@@ -45,6 +45,7 @@ const PlaylistImage = styled.img`
 `;
 
 // damos estilos al boton de like y la ubicaion en la esquina inferior derecha
+// utilizamos el color verde para el boton de like 
 const LikeButton = styled.button`
   position: absolute;
   bottom: 10px;
@@ -94,11 +95,11 @@ function MainContent() {
                   <PlaylistImage src={playlist.image} alt={playlist.name} />
                   <h3>{playlist.name}</h3>
                   <p>{playlist.artist}</p>
-                  {/* <FaThumbsUp onClick={() => toggleLike(song)} /> */}
+                  {/* definimos un like button para mostrarlo en la seccion de Tu Libreria*/}
                   <LikeButton
+                    // dejamos vivo un prop indicando si la cancion esta en la lista de preferidos
                     isLiked={likedPlaylists[playlist.id]}
-                    onClick={(e) => {
-                      e.stopPropagation();
+                    onClick={() => {
                       toggleLike(playlist.id);
                     }}
                   >

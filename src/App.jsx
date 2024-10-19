@@ -8,7 +8,7 @@ import Login from './components/Login';
 //import CheckFirebaseConnection from './components/CheckFirebaseConnection';
 import { SongProvider } from './contexts/SongContext';
 
-
+// estilos de la aplicacion
 const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,19 +22,21 @@ const ContentWrapper = styled.div`
 `;
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  // inicializamos el estado de isLoggedIn en false
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // funcion para verificar si el usuario esta logueado
   useEffect(() => {
     const user = localStorage.getItem('user');
     if (user) {
       setIsLoggedIn(true);
     }
   }, []);
-
+  // funcion para loguear al usuario
   const handleLogin = () => {
     setIsLoggedIn(true);
   };
-
+ // funcion para cerrar la sesion
   const handleLogout = () => {
     localStorage.removeItem('user');
     setIsLoggedIn(false);
